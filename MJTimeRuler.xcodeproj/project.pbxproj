@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2FA832102FFE4757D44365E5 /* libPods-MJTimeRulerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEE43683080F34AAF5AEDB7 /* libPods-MJTimeRulerUITests.a */; };
+		6F73002C911DBB486876CE08 /* libPods-MJTimeRuler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 198050E09CCF9FE1086AC676 /* libPods-MJTimeRuler.a */; };
+		8C7329D6A9988B105D4C20FF /* libPods-MJTimeRulerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2ADB277DA1E78C253C5D47F /* libPods-MJTimeRulerTests.a */; };
+		CDC2B42D210EEBEE00E49473 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC2B42C210EEBEE00E49473 /* AppDelegate.m */; };
+		CDC2B433210EEBEE00E49473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC2B431210EEBEE00E49473 /* Main.storyboard */; };
+		CDC2B435210EEBF000E49473 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC2B434210EEBF000E49473 /* Assets.xcassets */; };
+		CDC2B438210EEBF000E49473 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC2B436210EEBF000E49473 /* LaunchScreen.storyboard */; };
+		CDC2B43B210EEBF000E49473 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC2B43A210EEBF000E49473 /* main.m */; };
+		CDC2B445210EEBF000E49473 /* MJTimeRulerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC2B444210EEBF000E49473 /* MJTimeRulerTests.m */; };
+		CDC2B450210EEBF000E49473 /* MJTimeRulerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC2B44F210EEBF000E49473 /* MJTimeRulerUITests.m */; };
+		CDC2B45F210EEC1300E49473 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC2B45E210EEC1300E49473 /* ViewController.m */; };
+		CDC2B467210EEC7800E49473 /* MJTickModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC2B461210EEC7800E49473 /* MJTickModel.m */; };
+		CDC2B468210EEC7800E49473 /* MJTimeRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC2B463210EEC7800E49473 /* MJTimeRulerView.m */; };
+		CDC2B469210EEC7800E49473 /* MJTickMarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC2B464210EEC7800E49473 /* MJTickMarkCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDC2B441210EEBF000E49473 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDC2B420210EEBEE00E49473 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDC2B427210EEBEE00E49473;
+			remoteInfo = MJTimeRuler;
+		};
+		CDC2B44C210EEBF000E49473 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDC2B420210EEBEE00E49473 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDC2B427210EEBEE00E49473;
+			remoteInfo = MJTimeRuler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		102C9CB221597C3CBA6D0F3F /* Pods-MJTimeRuler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJTimeRuler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJTimeRuler/Pods-MJTimeRuler.debug.xcconfig"; sourceTree = "<group>"; };
+		198050E09CCF9FE1086AC676 /* libPods-MJTimeRuler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJTimeRuler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A120F1D726FE2AA2F3F6E2D /* Pods-MJTimeRulerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJTimeRulerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJTimeRulerTests/Pods-MJTimeRulerTests.release.xcconfig"; sourceTree = "<group>"; };
+		866344227DA727801D8F997B /* Pods-MJTimeRulerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJTimeRulerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJTimeRulerUITests/Pods-MJTimeRulerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9AEE43683080F34AAF5AEDB7 /* libPods-MJTimeRulerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJTimeRulerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6820A3ACA8EB73B5A60AC29 /* Pods-MJTimeRulerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJTimeRulerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJTimeRulerUITests/Pods-MJTimeRulerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A73811C1E0D059781F3B7910 /* Pods-MJTimeRulerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJTimeRulerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJTimeRulerTests/Pods-MJTimeRulerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0EB8731F564706B7F60A361 /* Pods-MJTimeRuler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJTimeRuler.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJTimeRuler/Pods-MJTimeRuler.release.xcconfig"; sourceTree = "<group>"; };
+		CDC2B428210EEBEE00E49473 /* MJTimeRuler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJTimeRuler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC2B42B210EEBEE00E49473 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CDC2B42C210EEBEE00E49473 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CDC2B432210EEBEE00E49473 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDC2B434210EEBF000E49473 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDC2B437210EEBF000E49473 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDC2B439210EEBF000E49473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDC2B43A210EEBF000E49473 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CDC2B440210EEBF000E49473 /* MJTimeRulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJTimeRulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC2B444210EEBF000E49473 /* MJTimeRulerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJTimeRulerTests.m; sourceTree = "<group>"; };
+		CDC2B446210EEBF000E49473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDC2B44B210EEBF000E49473 /* MJTimeRulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJTimeRulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC2B44F210EEBF000E49473 /* MJTimeRulerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJTimeRulerUITests.m; sourceTree = "<group>"; };
+		CDC2B451210EEBF000E49473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDC2B45D210EEC1200E49473 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CDC2B45E210EEC1300E49473 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CDC2B461210EEC7800E49473 /* MJTickModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTickModel.m; sourceTree = "<group>"; };
+		CDC2B462210EEC7800E49473 /* MJTickMarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTickMarkCell.h; sourceTree = "<group>"; };
+		CDC2B463210EEC7800E49473 /* MJTimeRulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTimeRulerView.m; sourceTree = "<group>"; };
+		CDC2B464210EEC7800E49473 /* MJTickMarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTickMarkCell.m; sourceTree = "<group>"; };
+		CDC2B465210EEC7800E49473 /* MJTickModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTickModel.h; sourceTree = "<group>"; };
+		CDC2B466210EEC7800E49473 /* MJTimeRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTimeRulerView.h; sourceTree = "<group>"; };
+		CDC2B46A210EEC9E00E49473 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F2ADB277DA1E78C253C5D47F /* libPods-MJTimeRulerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJTimeRulerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDC2B425210EEBEE00E49473 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F73002C911DBB486876CE08 /* libPods-MJTimeRuler.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDC2B43D210EEBF000E49473 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C7329D6A9988B105D4C20FF /* libPods-MJTimeRulerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDC2B448210EEBF000E49473 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FA832102FFE4757D44365E5 /* libPods-MJTimeRulerUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		232700B2873FF858BE40EDDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				102C9CB221597C3CBA6D0F3F /* Pods-MJTimeRuler.debug.xcconfig */,
+				C0EB8731F564706B7F60A361 /* Pods-MJTimeRuler.release.xcconfig */,
+				A73811C1E0D059781F3B7910 /* Pods-MJTimeRulerTests.debug.xcconfig */,
+				5A120F1D726FE2AA2F3F6E2D /* Pods-MJTimeRulerTests.release.xcconfig */,
+				866344227DA727801D8F997B /* Pods-MJTimeRulerUITests.debug.xcconfig */,
+				A6820A3ACA8EB73B5A60AC29 /* Pods-MJTimeRulerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6AB5637BBA1F94493F42F14D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				198050E09CCF9FE1086AC676 /* libPods-MJTimeRuler.a */,
+				F2ADB277DA1E78C253C5D47F /* libPods-MJTimeRulerTests.a */,
+				9AEE43683080F34AAF5AEDB7 /* libPods-MJTimeRulerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDC2B41F210EEBEE00E49473 = {
+			isa = PBXGroup;
+			children = (
+				CDC2B42A210EEBEE00E49473 /* MJTimeRuler */,
+				CDC2B443210EEBF000E49473 /* MJTimeRulerTests */,
+				CDC2B44E210EEBF000E49473 /* MJTimeRulerUITests */,
+				CDC2B429210EEBEE00E49473 /* Products */,
+				232700B2873FF858BE40EDDF /* Pods */,
+				6AB5637BBA1F94493F42F14D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CDC2B429210EEBEE00E49473 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDC2B428210EEBEE00E49473 /* MJTimeRuler.app */,
+				CDC2B440210EEBF000E49473 /* MJTimeRulerTests.xctest */,
+				CDC2B44B210EEBF000E49473 /* MJTimeRulerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDC2B42A210EEBEE00E49473 /* MJTimeRuler */ = {
+			isa = PBXGroup;
+			children = (
+				CDC2B42B210EEBEE00E49473 /* AppDelegate.h */,
+				CDC2B42C210EEBEE00E49473 /* AppDelegate.m */,
+				CDC2B434210EEBF000E49473 /* Assets.xcassets */,
+				CDC2B439210EEBF000E49473 /* Info.plist */,
+				CDC2B431210EEBEE00E49473 /* Main.storyboard */,
+				CDC2B436210EEBF000E49473 /* LaunchScreen.storyboard */,
+				CDC2B43A210EEBF000E49473 /* main.m */,
+				CDC2B460210EEC7800E49473 /* MJTimerRuler */,
+				CDC2B46A210EEC9E00E49473 /* PrefixHeader.pch */,
+				CDC2B45D210EEC1200E49473 /* ViewController.h */,
+				CDC2B45E210EEC1300E49473 /* ViewController.m */,
+			);
+			path = MJTimeRuler;
+			sourceTree = "<group>";
+		};
+		CDC2B443210EEBF000E49473 /* MJTimeRulerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDC2B444210EEBF000E49473 /* MJTimeRulerTests.m */,
+				CDC2B446210EEBF000E49473 /* Info.plist */,
+			);
+			path = MJTimeRulerTests;
+			sourceTree = "<group>";
+		};
+		CDC2B44E210EEBF000E49473 /* MJTimeRulerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CDC2B44F210EEBF000E49473 /* MJTimeRulerUITests.m */,
+				CDC2B451210EEBF000E49473 /* Info.plist */,
+			);
+			path = MJTimeRulerUITests;
+			sourceTree = "<group>";
+		};
+		CDC2B460210EEC7800E49473 /* MJTimerRuler */ = {
+			isa = PBXGroup;
+			children = (
+				CDC2B462210EEC7800E49473 /* MJTickMarkCell.h */,
+				CDC2B464210EEC7800E49473 /* MJTickMarkCell.m */,
+				CDC2B465210EEC7800E49473 /* MJTickModel.h */,
+				CDC2B461210EEC7800E49473 /* MJTickModel.m */,
+				CDC2B466210EEC7800E49473 /* MJTimeRulerView.h */,
+				CDC2B463210EEC7800E49473 /* MJTimeRulerView.m */,
+			);
+			path = MJTimerRuler;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDC2B427210EEBEE00E49473 /* MJTimeRuler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDC2B454210EEBF000E49473 /* Build configuration list for PBXNativeTarget "MJTimeRuler" */;
+			buildPhases = (
+				16E97E4485CDB89F7F4B62D9 /* [CP] Check Pods Manifest.lock */,
+				CDC2B424210EEBEE00E49473 /* Sources */,
+				CDC2B425210EEBEE00E49473 /* Frameworks */,
+				CDC2B426210EEBEE00E49473 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MJTimeRuler;
+			productName = MJTimeRuler;
+			productReference = CDC2B428210EEBEE00E49473 /* MJTimeRuler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDC2B43F210EEBF000E49473 /* MJTimeRulerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDC2B457210EEBF000E49473 /* Build configuration list for PBXNativeTarget "MJTimeRulerTests" */;
+			buildPhases = (
+				4D74EBB23C2F813DF97872A8 /* [CP] Check Pods Manifest.lock */,
+				CDC2B43C210EEBF000E49473 /* Sources */,
+				CDC2B43D210EEBF000E49473 /* Frameworks */,
+				CDC2B43E210EEBF000E49473 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDC2B442210EEBF000E49473 /* PBXTargetDependency */,
+			);
+			name = MJTimeRulerTests;
+			productName = MJTimeRulerTests;
+			productReference = CDC2B440210EEBF000E49473 /* MJTimeRulerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CDC2B44A210EEBF000E49473 /* MJTimeRulerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDC2B45A210EEBF000E49473 /* Build configuration list for PBXNativeTarget "MJTimeRulerUITests" */;
+			buildPhases = (
+				2DA52A3D8F90349507AD5D0E /* [CP] Check Pods Manifest.lock */,
+				CDC2B447210EEBF000E49473 /* Sources */,
+				CDC2B448210EEBF000E49473 /* Frameworks */,
+				CDC2B449210EEBF000E49473 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDC2B44D210EEBF000E49473 /* PBXTargetDependency */,
+			);
+			name = MJTimeRulerUITests;
+			productName = MJTimeRulerUITests;
+			productReference = CDC2B44B210EEBF000E49473 /* MJTimeRulerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDC2B420210EEBEE00E49473 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = MJ2009;
+				TargetAttributes = {
+					CDC2B427210EEBEE00E49473 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					CDC2B43F210EEBF000E49473 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = CDC2B427210EEBEE00E49473;
+					};
+					CDC2B44A210EEBF000E49473 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = CDC2B427210EEBEE00E49473;
+					};
+				};
+			};
+			buildConfigurationList = CDC2B423210EEBEE00E49473 /* Build configuration list for PBXProject "MJTimeRuler" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDC2B41F210EEBEE00E49473;
+			productRefGroup = CDC2B429210EEBEE00E49473 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDC2B427210EEBEE00E49473 /* MJTimeRuler */,
+				CDC2B43F210EEBF000E49473 /* MJTimeRulerTests */,
+				CDC2B44A210EEBF000E49473 /* MJTimeRulerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDC2B426210EEBEE00E49473 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC2B438210EEBF000E49473 /* LaunchScreen.storyboard in Resources */,
+				CDC2B435210EEBF000E49473 /* Assets.xcassets in Resources */,
+				CDC2B433210EEBEE00E49473 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDC2B43E210EEBF000E49473 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDC2B449210EEBF000E49473 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16E97E4485CDB89F7F4B62D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MJTimeRuler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DA52A3D8F90349507AD5D0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MJTimeRulerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D74EBB23C2F813DF97872A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MJTimeRulerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDC2B424210EEBEE00E49473 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC2B45F210EEC1300E49473 /* ViewController.m in Sources */,
+				CDC2B468210EEC7800E49473 /* MJTimeRulerView.m in Sources */,
+				CDC2B469210EEC7800E49473 /* MJTickMarkCell.m in Sources */,
+				CDC2B43B210EEBF000E49473 /* main.m in Sources */,
+				CDC2B42D210EEBEE00E49473 /* AppDelegate.m in Sources */,
+				CDC2B467210EEC7800E49473 /* MJTickModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDC2B43C210EEBF000E49473 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC2B445210EEBF000E49473 /* MJTimeRulerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDC2B447210EEBF000E49473 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDC2B450210EEBF000E49473 /* MJTimeRulerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDC2B442210EEBF000E49473 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDC2B427210EEBEE00E49473 /* MJTimeRuler */;
+			targetProxy = CDC2B441210EEBF000E49473 /* PBXContainerItemProxy */;
+		};
+		CDC2B44D210EEBF000E49473 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDC2B427210EEBEE00E49473 /* MJTimeRuler */;
+			targetProxy = CDC2B44C210EEBF000E49473 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CDC2B431210EEBEE00E49473 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDC2B432210EEBEE00E49473 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDC2B436210EEBF000E49473 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDC2B437210EEBF000E49473 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDC2B452210EEBF000E49473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CDC2B453210EEBF000E49473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDC2B455210EEBF000E49473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 102C9CB221597C3CBA6D0F3F /* Pods-MJTimeRuler.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MJTimeRuler/PrefixHeader.pch";
+				INFOPLIST_FILE = MJTimeRuler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.incredibleMJ.MJTimeRuler.MJTimeRuler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDC2B456210EEBF000E49473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0EB8731F564706B7F60A361 /* Pods-MJTimeRuler.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MJTimeRuler/PrefixHeader.pch";
+				INFOPLIST_FILE = MJTimeRuler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.incredibleMJ.MJTimeRuler.MJTimeRuler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CDC2B458210EEBF000E49473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A73811C1E0D059781F3B7910 /* Pods-MJTimeRulerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MJTimeRulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.incredibleMJ.MJTimeRuler.MJTimeRulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MJTimeRuler.app/MJTimeRuler";
+			};
+			name = Debug;
+		};
+		CDC2B459210EEBF000E49473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A120F1D726FE2AA2F3F6E2D /* Pods-MJTimeRulerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MJTimeRulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.incredibleMJ.MJTimeRuler.MJTimeRulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MJTimeRuler.app/MJTimeRuler";
+			};
+			name = Release;
+		};
+		CDC2B45B210EEBF000E49473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 866344227DA727801D8F997B /* Pods-MJTimeRulerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MJTimeRulerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.incredibleMJ.MJTimeRuler.MJTimeRulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MJTimeRuler;
+			};
+			name = Debug;
+		};
+		CDC2B45C210EEBF000E49473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6820A3ACA8EB73B5A60AC29 /* Pods-MJTimeRulerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MJTimeRulerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.incredibleMJ.MJTimeRuler.MJTimeRulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MJTimeRuler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDC2B423210EEBEE00E49473 /* Build configuration list for PBXProject "MJTimeRuler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDC2B452210EEBF000E49473 /* Debug */,
+				CDC2B453210EEBF000E49473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDC2B454210EEBF000E49473 /* Build configuration list for PBXNativeTarget "MJTimeRuler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDC2B455210EEBF000E49473 /* Debug */,
+				CDC2B456210EEBF000E49473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDC2B457210EEBF000E49473 /* Build configuration list for PBXNativeTarget "MJTimeRulerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDC2B458210EEBF000E49473 /* Debug */,
+				CDC2B459210EEBF000E49473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDC2B45A210EEBF000E49473 /* Build configuration list for PBXNativeTarget "MJTimeRulerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDC2B45B210EEBF000E49473 /* Debug */,
+				CDC2B45C210EEBF000E49473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDC2B420210EEBEE00E49473 /* Project object */;
+}
