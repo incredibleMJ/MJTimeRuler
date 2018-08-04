@@ -9,19 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MJTimeRulerView : UIView
-@property (nonatomic, assign) UIEdgeInsets edgeInset;
-@property (nonatomic, assign, readonly) CGSize cellSize;
-
-/**
- 单位刻度秒数
- */
-@property (nonatomic, assign, readonly) double averageSec;
-
-/**
- 单位刻度的像素宽度
- */
-@property (nonatomic, assign, readonly) CGFloat distance;
-
 /**
  当前秒数
  */
@@ -36,5 +23,12 @@
  缩放比
  */
 @property (nonatomic, assign) float scale;
+
+@property (nonatomic, strong, readonly) UICollectionView *collectionView;
+@property (nonatomic, strong) UIColor *lineColor;
+@property (nonatomic, strong) UIColor *timeTextColor;
+@property (nonatomic, strong) UIColor *indicatorColor;
+
+@property (nonatomic, copy) void(^didScroll)(double currentSec);
 
 @end

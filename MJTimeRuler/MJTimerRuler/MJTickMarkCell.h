@@ -11,6 +11,8 @@
 
 @interface MJTickMarkCell : UICollectionViewCell
 @property (nonatomic, strong) UIColor *lineColor;
+@property (nonatomic, strong) UIColor *textColor;
+
 @property (nonatomic, strong) MJTickModel *model;
 
 + (CGFloat)lineHeightForLevel:(MJTickScaleLevel)level;

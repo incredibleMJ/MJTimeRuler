@@ -50,6 +50,11 @@
     self.line.backgroundColor = lineColor;
 }
 
+- (void)setTextColor:(UIColor *)textColor {
+    _textColor = textColor;
+    self.label.textColor = textColor;
+}
+
 - (void)setModel:(MJTickModel *)model {
     _model = model;
     

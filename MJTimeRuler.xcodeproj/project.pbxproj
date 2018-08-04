@@ -10,6 +10,7 @@
 		2FA832102FFE4757D44365E5 /* libPods-MJTimeRulerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEE43683080F34AAF5AEDB7 /* libPods-MJTimeRulerUITests.a */; };
 		6F73002C911DBB486876CE08 /* libPods-MJTimeRuler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 198050E09CCF9FE1086AC676 /* libPods-MJTimeRuler.a */; };
 		8C7329D6A9988B105D4C20FF /* libPods-MJTimeRulerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2ADB277DA1E78C253C5D47F /* libPods-MJTimeRulerTests.a */; };
+		CD7E5A6E21156C28005B8AEF /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E5A6D21156C28005B8AEF /* NSString+Extension.m */; };
 		CDC2B42D210EEBEE00E49473 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC2B42C210EEBEE00E49473 /* AppDelegate.m */; };
 		CDC2B433210EEBEE00E49473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC2B431210EEBEE00E49473 /* Main.storyboard */; };
 		CDC2B435210EEBF000E49473 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC2B434210EEBF000E49473 /* Assets.xcassets */; };
@@ -49,6 +50,8 @@
 		A6820A3ACA8EB73B5A60AC29 /* Pods-MJTimeRulerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJTimeRulerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJTimeRulerUITests/Pods-MJTimeRulerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A73811C1E0D059781F3B7910 /* Pods-MJTimeRulerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJTimeRulerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJTimeRulerTests/Pods-MJTimeRulerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0EB8731F564706B7F60A361 /* Pods-MJTimeRuler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJTimeRuler.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJTimeRuler/Pods-MJTimeRuler.release.xcconfig"; sourceTree = "<group>"; };
+		CD7E5A6C21156C28005B8AEF /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		CD7E5A6D21156C28005B8AEF /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		CDC2B428210EEBEE00E49473 /* MJTimeRuler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJTimeRuler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC2B42B210EEBEE00E49473 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CDC2B42C210EEBEE00E49473 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -187,12 +190,14 @@
 		CDC2B460210EEC7800E49473 /* MJTimerRuler */ = {
 			isa = PBXGroup;
 			children = (
+				CDC2B466210EEC7800E49473 /* MJTimeRulerView.h */,
+				CDC2B463210EEC7800E49473 /* MJTimeRulerView.m */,
 				CDC2B462210EEC7800E49473 /* MJTickMarkCell.h */,
 				CDC2B464210EEC7800E49473 /* MJTickMarkCell.m */,
 				CDC2B465210EEC7800E49473 /* MJTickModel.h */,
 				CDC2B461210EEC7800E49473 /* MJTickModel.m */,
-				CDC2B466210EEC7800E49473 /* MJTimeRulerView.h */,
-				CDC2B463210EEC7800E49473 /* MJTimeRulerView.m */,
+				CD7E5A6C21156C28005B8AEF /* NSString+Extension.h */,
+				CD7E5A6D21156C28005B8AEF /* NSString+Extension.m */,
 			);
 			path = MJTimerRuler;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				CDC2B43B210EEBF000E49473 /* main.m in Sources */,
 				CDC2B42D210EEBEE00E49473 /* AppDelegate.m in Sources */,
 				CDC2B467210EEC7800E49473 /* MJTickModel.m in Sources */,
+				CD7E5A6E21156C28005B8AEF /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

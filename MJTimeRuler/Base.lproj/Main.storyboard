@@ -19,23 +19,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="rUk-7f-jta">
-                                <rect key="frame" x="13" y="478" width="349" height="31"/>
+                                <rect key="frame" x="13" y="537" width="349" height="31"/>
                                 <connections>
                                     <action selector="valueChanged:" destination="j4A-Qh-lbR" eventType="valueChanged" id="srP-Ja-KfH"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCa-zy-CP5">
+                                <rect key="frame" x="15" y="516" width="345" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Dwn-DV-jAf" firstAttribute="trailing" secondItem="rUk-7f-jta" secondAttribute="trailing" constant="15" id="1X0-qv-BpB"/>
-                            <constraint firstItem="rUk-7f-jta" firstAttribute="leading" secondItem="Dwn-DV-jAf" secondAttribute="leading" constant="15" id="CQQ-MJ-Kgl"/>
-                            <constraint firstItem="Dwn-DV-jAf" firstAttribute="bottom" secondItem="rUk-7f-jta" secondAttribute="bottom" constant="159" id="Z6I-ZD-Wxi"/>
+                            <constraint firstItem="rUk-7f-jta" firstAttribute="trailing" secondItem="tCa-zy-CP5" secondAttribute="trailing" id="C8b-7B-woR"/>
+                            <constraint firstItem="Dwn-DV-jAf" firstAttribute="trailing" secondItem="rUk-7f-jta" secondAttribute="trailing" constant="15" id="LOw-cL-Cai"/>
+                            <constraint firstItem="rUk-7f-jta" firstAttribute="leading" secondItem="tCa-zy-CP5" secondAttribute="leading" id="PUg-0i-XMN"/>
+                            <constraint firstItem="Dwn-DV-jAf" firstAttribute="bottom" secondItem="rUk-7f-jta" secondAttribute="bottom" constant="100" id="Uka-n7-2Zz"/>
+                            <constraint firstItem="rUk-7f-jta" firstAttribute="leading" secondItem="Dwn-DV-jAf" secondAttribute="leading" constant="15" id="rgz-7s-Ydx"/>
+                            <constraint firstItem="rUk-7f-jta" firstAttribute="top" secondItem="tCa-zy-CP5" secondAttribute="bottom" constant="21" id="t7g-hf-PvN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dwn-DV-jAf"/>
                     </view>
                     <navigationItem key="navigationItem" id="tls-Z6-bM5"/>
                     <connections>
                         <outlet property="slider" destination="rUk-7f-jta" id="gCS-Mc-7GS"/>
+                        <outlet property="timeLabel" destination="tCa-zy-CP5" id="B1D-XB-CLy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEo-gG-lEu" sceneMemberID="firstResponder"/>

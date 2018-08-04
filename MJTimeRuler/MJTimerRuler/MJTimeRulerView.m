@@ -8,20 +8,34 @@
 
 #import "MJTimeRulerView.h"
 #import "MJTickMarkCell.h"
+#import "NSString+Extension.h"
 
 static double amountSec = 3600 * 24;//总秒数 24h
 static CGFloat baseWidth = 8; //最小刻度间隔(未缩放)
 static CGFloat minLabelSpace = 55;//时间标签之间的最小距离
+static CGFloat lineWidth = 2; //线宽
 
 @interface MJTimeRulerView()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
-@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong, readwrite) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
-@property (nonatomic, strong) NSMutableArray *tickModels;
 
-@property (nonatomic, assign, readwrite) CGSize cellSize;
-@property (nonatomic, assign, readwrite) CGFloat distance;
+@property (nonatomic, assign) UIEdgeInsets edgeInset;
+@property (nonatomic, assign) CGSize cellSize;
 
-@property (nonatomic, strong) NSMutableDictionary *modelsDic;
+@property (nonatomic, strong) UIView *indicatorLine;
+
+@property (nonatomic, strong) NSMutableArray *tickModels;//刻度模型
+@property (nonatomic, strong) NSMutableDictionary *modelsDic;//模型字典 用来降低计算频率 直接返回计算好的model
+
+/**
+ 单位刻度秒数
+ */
+@property (nonatomic, assign) double averageSec;
+
+/**
+ 单位刻度的像素宽度
+ */
+@property (nonatomic, assign, readonly) CGFloat distance;
 
 /**
  刻度总数
@@ -82,7 +96,28 @@ static CGFloat minLabelSpace = 55;//时间标签之间的最小距离
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
+    
+    self.indicatorLine = [UIView new];
+    [self addSubview:self.indicatorLine];
+    [self.indicatorLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(0);
+        make.top.mas_equalTo(20);
+        make.bottom.mas_equalTo(-20);
+        make.width.mas_equalTo(2);
+    }];
+    self.indicatorLine.backgroundColor = self.indicatorColor ?: [UIColor redColor];
+    
     [self redraw];
+}
+
+- (void)layoutSubviews {
+    //ruler 左边距 主要用来将0刻度推到屏幕中央
+    CGFloat LRPadding = self.bounds.size.width / 2.0 - self.cellSize.width / 2;
+    //ruler 上边距 主要将刻度以上位置腾出来显示自定义 View  减1主要是考虑到小数精度问题造成cell显示不正常
+    CGFloat topPadding = self.bounds.size.height - self.cellSize.height - 1;
+    self.edgeInset = UIEdgeInsetsMake(topPadding, LRPadding, 0, LRPadding);
+    
+    [super layoutSubviews];
 }
 
 - (void)redraw {
@@ -123,24 +158,21 @@ static CGFloat minLabelSpace = 55;//时间标签之间的最小距离
     
     [self.collectionView reloadData];
     
-    CGFloat lineWidth = 2;
-    self.collectionView.contentOffset = CGPointMake((_distance + lineWidth) * self.currentSec / _averageSec, 0);
+    //设置 contentOffset 会触发 scrollView 的 didScroll 方法 , 而 didScroll 方法有根据 offset 计算当前秒数的逻辑 , 造成滚动异常 所以这里先把代理置空 , 设置完成后再设置代理处理用户的滚动操作
+    {
+        self.collectionView.delegate = nil;
+        self.collectionView.contentOffset = CGPointMake((_distance + lineWidth) * self.currentSec / _averageSec, 0);
+        self.collectionView.delegate = self;
+    }
 }
 
-- (NSString *)dateStrSinceZeroDateWithInterval:(NSTimeInterval)interval hasSecond:(BOOL)isHasSec {
-    NSDate *zeroDate = [self zeroDate];
-    NSDateFormatter *dateFomater = [[NSDateFormatter alloc]init];
-    NSDate *date = [NSDate dateWithTimeInterval:interval sinceDate:zeroDate];
-    dateFomater.dateFormat = isHasSec ? @"HH:mm:ss" : @"HH:mm";
-    return [dateFomater stringFromDate:date];
-}
-
-- (NSDate *)zeroDate {
-    NSDate *nowDate = [NSDate date];
-    NSDateFormatter *dateFomater = [[NSDateFormatter alloc]init];
-    dateFomater.dateFormat = @"yyyy年MM月dd日";
-    NSString *zeroDateStr = [dateFomater stringFromDate:nowDate];
-    return [dateFomater dateFromString:zeroDateStr];
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    double currentSec = (scrollView.contentOffset.x / (_distance + lineWidth)) * _averageSec;
+    _currentSec = currentSec;
+    if (self.didScroll) {
+        self.didScroll(currentSec);
+    }
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -150,6 +182,8 @@ static CGFloat minLabelSpace = 55;//时间标签之间的最小距离
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MJTickMarkCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    cell.lineColor = self.lineColor ?: [UIColor redColor];
+    cell.textColor = self.timeTextColor ?: [UIColor redColor];
     if (self.tickModels.count > indexPath.item) {
         cell.model = self.tickModels[indexPath.item];
     }
@@ -176,6 +210,14 @@ static CGFloat minLabelSpace = 55;//时间标签之间的最小距离
 }
 
 #pragma mark - Setter
+- (void)setCurrentSec:(double)currentSec {
+    _currentSec = currentSec;
+    if (self.didScroll) {
+        self.didScroll(currentSec);
+    }
+    [self redraw];
+}
+
 - (void)setScale:(float)scale {
     //确保缩放级别在有效范围内
     _scale = scale;
@@ -199,6 +241,21 @@ static CGFloat minLabelSpace = 55;//时间标签之间的最小距离
     [self.collectionView reloadData];
 }
 
+- (void)setLineColor:(UIColor *)lineColor {
+    _lineColor = lineColor;
+    [self.collectionView reloadData];
+}
+
+- (void)setTimeTextColor:(UIColor *)timeTextColor {
+    _timeTextColor = timeTextColor;
+    [self.collectionView reloadData];
+}
+
+- (void)setIndicatorColor:(UIColor *)indicatorColor {
+    _indicatorColor = indicatorColor;
+    self.indicatorLine.backgroundColor = indicatorColor;
+}
+
 #pragma mark - Getter
 - (NSUInteger)count {
     return (NSUInteger)(amountSec / _averageSec) + 1;
@@ -210,14 +267,14 @@ static CGFloat minLabelSpace = 55;//时间标签之间的最小距离
 
 - (NSArray<NSNumber *> *)scales {
     NSArray *arr = [_scales sortedArrayUsingComparator:^NSComparisonResult(NSNumber *obj1, NSNumber *obj2) {
-        return obj1 < obj2;
+        return [obj2 compare:obj1];
     }];
     return arr;
 }
 
 - (NSArray<NSNumber *> *)tagDurations {
     NSArray *arr = [_tagDurations sortedArrayUsingComparator:^NSComparisonResult(NSNumber *obj1, NSNumber *obj2) {
-        return obj1 < obj2;
+        return [obj2 compare:obj1];
     }];
     return arr;
 }
@@ -274,7 +331,7 @@ static CGFloat minLabelSpace = 55;//时间标签之间的最小距离
                     }
                     
                     if (isNeedAddLabel) {
-                        model.timeStr = [self dateStrSinceZeroDateWithInterval:value hasSecond:model.level == MJTickScaleLevel6];
+                        model.timeStr = [NSString dateStrSinceZeroDateWithInterval:value hasSecond:model.level == MJTickScaleLevel6];
                     }
                     [models addObject:model];
                 }
@@ -297,6 +354,7 @@ static CGFloat minLabelSpace = 55;//时间标签之间的最小距离
         _collectionView.delegate = self;
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
+        _collectionView.backgroundColor = [UIColor whiteColor];
         [_collectionView registerClass:[MJTickMarkCell class] forCellWithReuseIdentifier:@"cell"];
     }
     return _collectionView;

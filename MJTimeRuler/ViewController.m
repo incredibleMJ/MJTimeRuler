@@ -10,6 +10,7 @@
 #import "MJTimeRulerView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (nonatomic, strong) MJTimeRulerView *ruler;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @end
@@ -18,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor grayColor];
     
     self.ruler = [MJTimeRulerView new];
     [self.view addSubview:self.ruler];
@@ -27,25 +29,18 @@
         make.height.mas_equalTo(100);
     }];
     [self.view layoutIfNeeded];
+    self.ruler.lineColor = [UIColor blackColor];
+    self.ruler.timeTextColor = [UIColor blackColor];
+    self.ruler.indicatorColor = [UIColor darkGrayColor];
     
-    CGFloat LRPadding = self.view.bounds.size.width / 2.0 - self.ruler.cellSize.width / 2;
-    CGFloat topPadding = self.ruler.bounds.size.height - self.ruler.cellSize.height - 1;
-    self.ruler.edgeInset = UIEdgeInsetsMake(topPadding, LRPadding, 0, LRPadding);
-    self.ruler.currentSec = 8888;
-    
-    UIView *line = [UIView new];
-    [self.ruler addSubview:line];
-    [line mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(0);
-        make.top.mas_equalTo(10);
-        make.bottom.mas_equalTo(-10);
-        make.width.mas_equalTo(2);
-    }];
-    line.backgroundColor = [UIColor whiteColor];
-    
+    __weak ViewController *weakSelf = self;
+    self.ruler.didScroll = ^(double currentSec) {
+        weakSelf.timeLabel.text = [NSString stringWithFormat:@"sec:%.0f time:%@", currentSec, [NSString dateStrSinceZeroDateWithInterval:currentSec hasSecond:YES]];
+    };
+    self.ruler.currentSec = 8888;//当前秒数
+
     self.slider.minimumValue = 1;
     self.slider.maximumValue = self.ruler.maxScale;
-    
 }
 
 - (IBAction)valueChanged:(UISlider *)sender {
