@@ -169,6 +169,9 @@ static CGFloat lineWidth = 2; //线宽
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     double currentSec = (scrollView.contentOffset.x / (_distance + lineWidth)) * _averageSec;
+    if (currentSec < 0 || currentSec > amountSec) {
+        return;
+    }
     _currentSec = currentSec;
     if (self.didScroll) {
         self.didScroll(currentSec);

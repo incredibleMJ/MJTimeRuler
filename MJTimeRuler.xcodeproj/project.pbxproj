@@ -213,6 +213,8 @@
 				CDC2B424210EEBEE00E49473 /* Sources */,
 				CDC2B425210EEBEE00E49473 /* Frameworks */,
 				CDC2B426210EEBEE00E49473 /* Resources */,
+				B5BC8C67F5AE2B1A65B9B47E /* [CP] Embed Pods Frameworks */,
+				9C49F30C3F10A25FE72CA455 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +233,8 @@
 				CDC2B43C210EEBF000E49473 /* Sources */,
 				CDC2B43D210EEBF000E49473 /* Frameworks */,
 				CDC2B43E210EEBF000E49473 /* Resources */,
+				DC8899736A9893F87C640EB6 /* [CP] Embed Pods Frameworks */,
+				0F81B6FB6D29CA9A3BB3A3A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +254,8 @@
 				CDC2B447210EEBF000E49473 /* Sources */,
 				CDC2B448210EEBF000E49473 /* Frameworks */,
 				CDC2B449210EEBF000E49473 /* Resources */,
+				FA2BD795A87995841BD6969F /* [CP] Embed Pods Frameworks */,
+				8F4CF18A99FE2ECCD355EAE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,6 +337,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0F81B6FB6D29CA9A3BB3A3A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJTimeRulerTests/Pods-MJTimeRulerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		16E97E4485CDB89F7F4B62D9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,6 +404,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F4CF18A99FE2ECCD355EAE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJTimeRulerUITests/Pods-MJTimeRulerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C49F30C3F10A25FE72CA455 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJTimeRuler/Pods-MJTimeRuler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5BC8C67F5AE2B1A65B9B47E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJTimeRuler/Pods-MJTimeRuler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC8899736A9893F87C640EB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJTimeRulerTests/Pods-MJTimeRulerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA2BD795A87995841BD6969F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJTimeRulerUITests/Pods-MJTimeRulerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -572,6 +668,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MJTimeRuler/PrefixHeader.pch";
 				INFOPLIST_FILE = MJTimeRuler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -591,6 +688,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MJTimeRuler/PrefixHeader.pch";
 				INFOPLIST_FILE = MJTimeRuler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
